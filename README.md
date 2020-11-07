@@ -50,5 +50,10 @@ To log an activity, use the command
 ```
 python3 lifelog.py [activityName]
 ```
-which will run the C++ script logging/lifelog.py. The script will automatically gather the current local date and time and create
+which will run the Python script logging/lifelog.py. The script will automatically gather the current local date and time and create
 a new file in the appropriate directory, if necessary, and append a line to the file. It will then update _data/prevActivityName.txt_.
+I recommend making a script in ~/bin which runs
+```
+python3 ~/Your/Path/To/LifeData/logging/lifelog.py $0
+```
+for convenience.
