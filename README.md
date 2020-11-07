@@ -11,11 +11,11 @@ it visually. Additionally, it will hold non-code documents with my findings, as 
 the raw data I have gathered.
 
 ## The Data Library
-The _data_ directory is separated by year, and each year is separated by month.
-  data/[YYYY]/[MM]/[YYYYMMDD].txt
+The _data_ directory is separated by year, and each year is separated by month.<br>
+  data/[YYYY]/[MM]/[YYYYMMDD].txt<br>
 
-Each file stores data in the following format.
-  [activityName] [activityStartTime]
+Each file stores data in the following format.<br>
+  [activityName] [activityStartTime]<br>
 activityStartTime is in the format HHMM, 24 hour time. This is the list of all valid activities
 along with their activityNames (I named them like stocks just for fun) and definitions:
 <ol>
