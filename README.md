@@ -19,12 +19,12 @@ Each file stores data in the following format.
 activityStartTime is in the format HHMM, 24 hour time. This is the list of all valid activities
 along with their activityNames (I named them like stocks just for fun) and definitions:
 <ol>
-<li><b>lecture</b> _LECT_ either watching a lecture or reading for class</li>
-<li<b>obligations</b> _OBLG_ quizzes, tests, interviews</li>
-<li<b>working out</b> _WOUT_ working out or playing sports</li>
-<li<b>social time</b> _SOCL_ hanging out with friends online or offline (club meetings included)</li>
-<li<b>sleep</b> _SLEP_ sleeping at night or taking a nap</li>
-<li<b>YouTube</b> _YTBE_ watching low quality YouTube videos</li>
-<li<b>reading</b> _READ_ reading for enjoyment (not reading for class)</li>
-<li<b>high quality fun</b> _FUUN_ video games, exploring the Internet, watching high quality YouTube videos, but only alone</li>
+<li><b>lecture</b> <i>LECT</i> either watching a lecture or reading for class</li>
+<li><b>obligations</b> <i>OBLG</i> quizzes, tests, interviews</li>
+<li><b>working out</b> <i>WOUT</i> working out or playing sports</li>
+<li><b>social time</b> <i>SOCL</i> hanging out with friends online or offline (club meetings included)</li>
+<li><b>sleep</b> <i>SLEP</i> sleeping at night or taking a nap</li>
+<li><b>YouTube</b> <i>YTBE</i> watching low quality YouTube videos</li>
+<li><b>reading</b> <i>READ</i> reading for enjoyment (not reading for class)</li>
+<li><b>high quality fun</b> <i>FUUN</i> video games, exploring the Internet, watching high quality YouTube videos, but only alone</li>
 </ol>
