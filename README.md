@@ -1,9 +1,10 @@
 # Welcome to LifeData
-LifeData is my project to study my productivity using the scientific method. Specifically,
-I want to test two hypotheses:
+LifeData is my project to study my productivity using the scientific method.
+Not productivity in general but specifically _my_ productivity. Currently, I
+want to test two hypotheses:
 <ol>
-<li>Sleeping earlier increases productivity</li>
-<li>Taking a forced break at night increases productivity</li>
+  <li>Sleeping earlier increases <i>my</i> productivity</li>
+  <li>Taking a forced break at night increases <i>my</i> productivity</li>
 </ol>
 
 This repository will hold the scripts I use to log my time, analyze the data, and present
