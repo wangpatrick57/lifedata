@@ -3,11 +3,16 @@ from datetime import *
 from helpers import *
 
 REPO_HOME_DIR = '/Users/patrickwang/Documents/inUse/lifedata'
+SUMMARY_FPATH = f'{REPO_HOME_DIR}/summary.csv'
 USAGE_MSG = f'USAGE: python3 lifelog.py activityName [time]\n\tvalid activityNames: {VALID_ACTIVITIES_STR}'
 
 def main() -> None:
     if len(sys.argv) < 2:
         print(USAGE_MSG)
+        return
+
+    if sys.argv[1].lower() == 'summary':
+        print(''.join(open(SUMMARY_FPATH, 'r').readlines()))
         return
 
     activity = sys.argv[1].upper()
