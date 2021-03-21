@@ -23,9 +23,11 @@ def strs_to_dt(date_str: str, time_str: str) -> datetime:
     hour, minute = [int(data) for data in re.split('[^0-9]', time_str)]
     return datetime(year, month, day, hour, minute)
 
-def log_activity(dt: datetime, activity: str, home_dir: str, for_testing=False) -> bool:
+def get_data_fname(dt: datetime, home_dir: str) -> str:
     year, month, day, hours, minutes = extract_from_dt(dt)
+    return f'{home_dir}/data/{year}/{month}/{dt_to_str(dt, DATE_OPTION, "_")}.txt'
 
+def log_activity(dt: datetime, activity: str, home_dir: str, for_testing=False) -> bool:
     # check if valid activity name otherwise
     if activity not in VALID_ACTIVITY_NAMES:
         if not for_testing:
@@ -43,12 +45,12 @@ def log_activity(dt: datetime, activity: str, home_dir: str, for_testing=False) 
 
     # read from latest_log.txt
     f = open(latest_log_fname, 'r')
-    latest_log_date_str, latest_log_activity, latest_log_time_str = f.read().split(' ')
+    latest_log_date_str, latest_log_activity, latest_log_time_str = f.read().strip().split(' ')
     latest_log_dt = strs_to_dt(latest_log_date_str, latest_log_time_str)
     f.close()
 
     # create directory if necessary
-    data_fname = f'{home_dir}/data/{year}/{month}/{dt_to_str(dt, DATE_OPTION, "_")}.txt'
+    data_fname = get_data_fname(dt, home_dir)
 
     if not os.path.exists(os.path.dirname(data_fname)):
         try:

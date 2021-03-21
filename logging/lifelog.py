@@ -3,7 +3,7 @@ from datetime import *
 from helpers import *
 
 REPO_HOME_DIR = '/Users/patrickwang/Documents/inUse/lifedata'
-SUMMARY_FPATH = f'{REPO_HOME_DIR}/summary.csv'
+SUMMARY_FNAME = f'{REPO_HOME_DIR}/summary.csv'
 USAGE_MSG = f'USAGE: python3 lifelog.py activityName [time]\n\tvalid activityNames: {VALID_ACTIVITIES_STR}'
 
 def main() -> None:
@@ -12,7 +12,16 @@ def main() -> None:
         return
 
     if sys.argv[1].lower() == 'summary':
-        print(''.join(open(SUMMARY_FPATH, 'r').readlines()))
+        print(''.join(open(SUMMARY_FNAME, 'r').readlines()), end='')
+        return
+    elif sys.argv[1].lower() == 'today':
+        today_data_fname = get_data_fname(datetime.now(), REPO_HOME_DIR)
+        print(''.join(open(today_data_fname, 'r').readlines()), end='')
+        return
+    elif sys.argv[1].lower() == 'paths':
+        today_data_fname = get_data_fname(datetime.now(), REPO_HOME_DIR)
+        print(f'Today\'s data: {today_data_fname}')
+        print(f'Summary file: {SUMMARY_FNAME}')
         return
 
     activity = sys.argv[1].upper()
